@@ -1,0 +1,177 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>QCircle Library Demo</title>
+  <meta name="description" content="QCircle Library Demo">
+  <meta name="author" content="David Radcliffe">
+
+  <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/sliders.css">
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script type="text/javascript"
+    src="https://code.jquery.com/jquery-3.4.1.min.js">
+  </script>
+</head>
+
+<body>
+  <h1>QCircle Library Demo</h1>
+  <p>
+    QCircle is a library for visualizing qubit states using
+    <em>circle notation</em>. This notation was introduced by
+    Eric R. Johnson, Nic Harrigan, and Mercedes Gimeno-Segovia
+    in their book, <em>Programming Quantum Computers.</em>
+  </p>
+
+  <p>
+    A qubit has two <em>basic states</em>, which are labeled |0&rang; and |1&rang;.
+    We use two circles to represent the state of a qubit. If the state is |0&rang;
+    then the first circle is <em>on</em> and the second circle is <em>off</em>.
+  </p>
+
+  <div class="register">
+    <div class="circle on">
+      <p>|0&rang;</p>
+    </div>
+
+    <div class="circle off">
+      <p>|1&rang;</p>
+    </div>
+  </div>
+
+  <p>
+    Similarly, if the state is |1&rang; then the first circle is <em>off</em>
+    and the second circle is <em>on</em>.
+  </p>
+
+  <div class="register">
+    <div class="circle off">
+    <p>|0&rang;</p>
+    </div>
+
+    <div class="circle on">
+      <p>|1&rang;</p>
+    </div>
+  </div>
+
+  <p>
+    But a qubit can have infinitely many other states. In general, the
+    state of a qubit is a superposition (combination) of the basic states
+    |0&rang; and |1&rang;. When the qubit is measured, the state
+    collapses to either |0&rang; or |1&rang;.
+  </p>
+
+  <p>
+    Each basic state has a <em>magnitude</em>, which is a number between 0 and 1.
+    The magnitude is represented by the radius of a yellow circle.
+    The square of the magnitude gives the probability that |0&rang; or
+    |1&rang; will be measured. The squared magnitudes always add up to 1.
+  </p>
+
+  <p>Drag the slider to adjust the magnitudes and probabilities of the
+    basic states |0&rang; and |1&rang;. You can also click on the slider
+    and use the arrow keys to change the values.
+  </p>
+
+  <div class="register one-qubit start">
+    <div class="circle off outer amplitude-0">
+      <div class="circle on inner"></div>
+      <p>|0&rang;<br/>
+        <span class="magnitude mag0">1.000</span><br/>
+        <span class="prob prob0">1.000</span>
+      </p>
+    </div>
+
+    <div class="circle off outer amplitude-1">
+      <div class="circle on inner"></div>
+      <p>|1&rang;<br/>
+        <span class="magnitude mag1">0.000</span><br/>
+        <span class="prob prob1">0.000</span>
+      </p>
+    </div>
+
+    <div class="legend">
+      <p>
+        <div class="psi">|&Psi;&rang; = <span class="mag0">1.000</span> |0&rang;
+          + <span class="mag1">0.000</span> |1&rang;</div>
+        <br/>
+        Basic state<br/>
+        Magnitude<br/>
+        Probability<br/>
+      </p>
+    </div>
+
+    <div class="control">
+      <input type="range" min="0" max="100" step="2" value="0" class="slider probability" name="probability">
+    </div>
+  </div>
+
+  <p>
+    In addition to the magnitude, each circle has a <em>phase</em>.
+    The phase is an angle between 0&deg; and 360&deg;
+    (or 2&pi; radians) and it can be visualized as a
+    rotation of the circle.
+  </p>
+
+  <p>
+    As it happens, the state of a qubit is not changed if we rotate
+    both circles by the same amount. All that matters is the difference
+    in the rotations. Consequently, we will only rotate the second circle.
+  </p>
+
+  <div class="register one-qubit start">
+    <div class="circle off outer amplitude-0">
+      <div class="circle on inner"></div>
+      <div class="line"></div>
+      <p>|0&rang;<br/>
+        <span class="magnitude mag0">1.000</span>
+        <br/>
+        <span class="prob prob0">0.000</span>
+      </p>
+    </div>
+
+    <div class="circle off outer amplitude-1">
+      <div class="circle on inner"></div>
+      <div class="line"></div>
+      <p>|1&rang;<br/>
+        <span class="magnitude mag1">0.000</span>
+        <br/>
+        <span class="prob prob1">0.000</span>
+      </p>
+    </div>
+
+    <div class="legend">
+      <p>
+        <div class="psi">|&Psi;&rang; = <span class="mag0">1.000</span> |0&rang;
+          + <span class="mag1">0.000</span>
+          e<span class="arg1">0.000 i</span>
+          |1&rang;</div>
+
+        <br/>
+        Basic state<br/>
+        Magnitude<br/>
+        Probability
+      </p>
+    </div>
+
+    <div class="control">
+      <input type="range" min="0" max="100" step="2" value="0" class="slider probability" name="magnitude">
+      <label for="magnitude">Magnitude</label>
+      <br/>
+      <input type="range" min="0" max="360" step="5" value="0" class="slider phase" name="phase">
+      <label for="phase">Phase</label>
+    </div>
+  </div>
+
+
+
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>QCircle: One Qubit with Phase</title>
+  <meta name="description" content="QCircle Demo: One qubit with phase">
+  <meta name="author" content="David Radcliffe">
+
+  <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/sliders.css">
+
+  <script type="text/javascript"
+    src="https://code.jquery.com/jquery-3.4.1.min.js">
+  </script>
+</head>
+
+<body>
+  <div class="register one-qubit start">
+    <div class="circle off outer amplitude-0">
+      <div class="circle on inner"></div>
+      <p>|0&rang;<br/>
+        <span class="magnitude mag0">1.000</span><br/>
+        <span class="prob prob0">1.000</span>
+      </p>
+    </div>
+
+    <div class="circle off outer amplitude-1">
+      <div class="circle on inner"></div>
+      <p>|1&rang;<br/>
+        <span class="magnitude mag1">0.000</span><br/>
+        <span class="prob prob1">0.000</span>
+      </p>
+    </div>
+
+    <div class="legend">
+      <p>
+        <div class="psi">|&Psi;&rang; = <span class="mag0">1.000</span> |0&rang;
+          + <span class="mag1">0.000</span> |1&rang;</div>
+        <br/>
+        Basic state<br/>
+        Magnitude<br/>
+        Probability<br/>
+      </p>
+    </div>
+
+    <div class="control">
+      <input type="range" min="0" max="100" step="2" value="0" class="slider probability" name="probability">
+    </div>
+  </div>
+
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

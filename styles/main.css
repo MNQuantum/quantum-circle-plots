@@ -1,0 +1,117 @@
+html {
+  color: #222;
+  line-height: 1.4;
+  font-size: 1.5em;
+  font-family: 'Abel', sans-serif;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+h1 {
+  background-color: #7a0019;
+  color: #ffffff;
+  text-align: center;
+}
+
+h2 {
+  background-color: #ffcc33;
+  padding-left: 40px;
+}
+
+label {
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.circle {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 20px;
+}
+
+.legend {
+  font-size: 0.75em;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.control {
+  margin-top: -20px;
+}
+
+.psi {
+  display: inline-block;
+  margin-bottom: 15px
+}
+
+.circle.on {
+  background-color: #ffcc00;
+}
+
+.circle.off {
+  background-color: #bbbbbb;
+}
+
+.outer {
+  position: relative;
+}
+
+.inner {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  left: 50%;
+  margin: -15px 0px 0px -15px;
+}
+
+.circle p {
+  text-align: center;
+  font-size: 0.75em;
+  margin-top: 60px;
+}
+
+.line {
+  position: absolute;
+  width: 1.5px;
+  height: 15px;
+  transform: translateX(29.9px) translateY(30px) rotate(180deg);
+  transform-origin: top;
+  background: black;
+}
+
+.arg1 {
+  font-size: 0.75em;
+  vertical-align: super;
+}
+
+.register {
+  margin-left: 40px;
+}
+
+.magnitude, .prob {
+  font-size: 0.8em;
+  color: #666;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.start .amplitude-0 .inner {
+  height: 60px;
+  width: 60px;
+  margin: -30px 0px 0px -30px;
+}
+
+.start .amplitude-1 .inner {
+  height: 0px;
+  width: 0px;
+}
+
+.start .amplitude-0 .line {
+  height: 30px;
+}
+
+.start .amplitude-1 .line {
+  height: 0px;
+}
