@@ -97,21 +97,25 @@ label {
   font-family: "Lucida Console", Monaco, monospace;
 }
 
-.start .amplitude-0 .inner {
+.one-qubit.start .amplitude-0 .inner {
   height: 60px;
   width: 60px;
   margin: -30px 0px 0px -30px;
 }
 
-.start .amplitude-1 .inner {
+.one-qubit.start .amplitude-1 .inner {
   height: 0px;
   width: 0px;
 }
 
-.start .amplitude-0 .line {
+.one-qubit.start .amplitude-0 .line {
   height: 30px;
 }
 
-.start .amplitude-1 .line {
+.one-qubit.start .amplitude-1 .line {
   height: 0px;
+}
+
+.content {
+  margin-bottom: 80px;
 }
